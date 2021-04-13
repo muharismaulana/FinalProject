@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <title>Home</title>
+    <!-- <link rel="stylesheet" href="http://127.0.0.1:5000/templates/styles.css"> -->
+</head>
+<style>
+  body {
+    background-color: #ffffff;
+    margin: 0;
+    background-image:url('http://127.0.0.1:5000/static/credit2.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    font-family:Trebuchet MS;
+  }
+  
+  .topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+   */
+  .topnav a.active {
+    background-color:  #ddd;
+    color: black;
+    font-family:Trebuchet MS;
+  }
+
+
+.button {
+  display: block;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  padding: 20px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+.button:hover {
+  box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate(0px, -10px) scale(1.2);
+          transform: translate(0px, -10px) scale(1.2);
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family:Trebuchet MS;
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family:Trebuchet MS;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #ddd;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+<body class= "background">
+    <!-- Navbar -->
+    <div class="navbar">
+      <a href="/about">About</a>
+      <div class="dropdown">
+        <button class="dropbtn">Dataset 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/appRecord">Application Record</a>
+          <a href="/credRecord">Credit Record</a>
+        </div>
+      </div>
+      
+      <a href="/">Home</a>
+    </div>
+    </div><br><br>
+      <center>
+        <h1 style="font-family:Trebuchet MS;" class='text-center display-9 my-1'>CREDIT CARD APPROVAL</h1>
+        <br><br><br><br><br>
+
+        <a href="/highlight" style="text-decoration:none;">
+      <div style="width: 200px; border: 1px solid black; padding:5 20px; font-family:Trebuchet MS;" class="button" >Highlight & Insight</div><br></a>
+      <a href="/predict" style="text-decoration:none;">
+      <div style="width: 200px; border: 1px solid black; padding:5 20px; font-family:Trebuchet MS;" class="button">Try Prediction</div></a>
+      <br><br><br><br>
+
+
+
+
+        <div class="row justify-content-center">
+          <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+              <div class="copyright text-center my-auto">
+                <span style="font-family:Trebuchet MS;">Copyright &copy; Muhammad Aris Maulana</span>
+              </div>
+            </div>
+          </footer>
+        </center>
+        </div> 
+</body>
+</html>

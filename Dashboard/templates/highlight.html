@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  
+    <title>Highlight</title>
+    <!-- <link rel="stylesheet" href="http://127.0.0.1:5000/templates/styles.css"> -->
+</head>
+<style>
+  html{
+    font-family: 'Trebuchet MS';
+  }
+  body {
+    background-color: #ffffff;
+    margin: 0;
+    background-image:url('http://127.0.0.1:5000/static/credit2.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Trebuchet MS';
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    font-family:Trebuchet MS;
+  }
+  
+  .topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+   */
+  .topnav a.active {
+    background-color:  #ddd;
+    color: black;
+    font-family:Trebuchet MS;
+  }
+
+
+.button {
+  display: block;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  padding: 20px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+.button:hover {
+  box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate(0px, -10px) scale(1.2);
+          transform: translate(0px, -10px) scale(1.2);
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family:Trebuchet MS;
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family:Trebuchet MS;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #ddd;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.content-slider {
+  width: 100%;
+  height: 360px;
+}
+
+.slider {
+  height: 320px;
+  width: 680px;
+  margin: 40px auto 0;
+  overflow: visible;
+  position: relative;
+}
+
+.mask {
+  overflow: hidden;
+  height: 900px;
+}
+
+.slider ul {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.slider li {
+  width: 680px;
+  height: 320px;
+  position: absolute;
+  top: -325px;
+  list-style: none;
+}
+
+.slider .quote {
+  font-size: 40px;
+  font-style: italic;
+}
+
+.slider .source {
+  font-size: 20px;
+  text-align: left;
+  font-family: 'Trebuchet MS';
+}
+
+.slider li.anim1 {
+  animation: cycle 15s linear infinite;
+}
+
+.slider li.anim2 {
+  animation: cycle2 15s linear infinite;
+}
+
+.slider li.anim3 {
+  animation: cycle3 15s linear infinite;
+}
+
+.slider li.anim4 {
+  animation: cycle4 15s linear infinite;
+}
+
+.slider li.anim5 {
+  animation: cycle5 15s linear infinite;
+}
+
+.slider:hover li {
+  animation-play-state: paused;
+}
+
+@keyframes cycle {
+  0% {
+    top: 0px;
+  }
+  4% {
+    top: 0px;
+  }
+  16% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  20% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  21% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  50% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  92% {
+    top: -325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  96% {
+    top: -325px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes cycle2 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  16% {
+    top: -325px;
+    opacity: 0;
+  }
+  20% {
+    top: 0px;
+    opacity: 1;
+  }
+  24% {
+    top: 0px;
+    opacity: 1;
+  }
+  36% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  40% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  41% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes cycle3 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  36% {
+    top: -325px;
+    opacity: 0;
+  }
+  40% {
+    top: 0px;
+    opacity: 1;
+  }
+  44% {
+    top: 0px;
+    opacity: 1;
+  }
+  56% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  60% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  61% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes cycle4 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  56% {
+    top: -325px;
+    opacity: 0;
+  }
+  60% {
+    top: 0px;
+    opacity: 1;
+  }
+  64% {
+    top: 0px;
+    opacity: 1;
+  }
+  76% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  80% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  81% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes cycle5 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  76% {
+    top: -325px;
+    opacity: 0;
+  }
+  80% {
+    top: 0px;
+    opacity: 1;
+  }
+  84% {
+    top: 0px;
+    opacity: 1;
+  }
+  96% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  100% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+</style>
+<body class= "background">
+    <!-- Navbar -->
+    <div class="navbar">
+      <a href="/about">About</a>
+      <div class="dropdown">
+        <button class="dropbtn">Dataset 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/appRecord">Application Record</a>
+          <a href="/credRecord">Credit Record</a>
+        </div>
+      </div>
+      
+      <a href="/">Home</a>
+    </div>
+    </div><br><br>
+    <center><h1 style="font-family: 'Trebuchet MS';">Highlight and Insight</h1></center>
+
+<div class="content-slider">
+  <div class="slider">
+    <div class="mask">
+      <ul>
+        <li class="anim1">
+          
+          <div class="quote">
+            <img style="height: 400px; width: 700px;" src="http://127.0.0.1:5000/static/status.png" alt="tes" style="width:100%">
+          </div>
+          <p class="source">Most of the customers falls between C (Paid off the same month) and 0 (1-29 days due) Status, 
+            before followed by X (No transaction during certain month), these criteria will most likely included in Good Client attribute, 
+            while the rest (Due for more than a month) will be included in Bad Client.</p>
+        </li>
+        <li class="anim2">
+          <img style="height: 400px; width: 700px;" src="http://127.0.0.1:5000/static/join.png" alt="tes" style="width:100%">
+          <p class="source">The majority is fall between 5 to 8 months old. This would be an issue as the customers not on the same page. 
+            It is not fair to compare customer that has been join for 6 months only to a customer that has been going for years. 
+            So we analyze further to find certain pattern during certain period that might fair.</p>
+        </li>
+        <li class="anim3">
+          <img style="height: 400px; width: 700px;" src="http://127.0.0.1:5000/static/due.png" alt="tes" style="width:100%">
+          <p class="source">
+            1. Bad client pattern could be capture in more or less for a year period <br>
+            2. We also add a certain amount of period to give them a 'chance' to clean their records.<br>
+            3. We set for 8 months, and we'll give another 4 months. So total 12 months. Customer that has been joined less 
+            than a year will be removed and the customer that has been joined for more than a year will trimmed into a year period. So, the fair comparison is achieved.</p>
+        </li>
+        <li class="anim4">
+          <img style="height: 400px; width: 700px;" src="http://127.0.0.1:5000/static/age.png" alt="tes" style="width:100%">
+          <p class="source">1. Customers aged above 40 most likely to be a bad client<br>
+            2. While younger customer from 25-40 will most likely a good client<br></p>
+        </li>
+        <li class="anim5">
+          <img style="height: 400px; width: 700px;" src="http://127.0.0.1:5000/static/gender.png" alt="tes" style="width:100%">
+          <p class="source">Most of the customers are Female. The ratio is 1:2 for Female.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>
